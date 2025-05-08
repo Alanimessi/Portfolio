@@ -1,0 +1,233 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #ff6b35;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  animation: slider 12s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+@keyframes slider {
+  0% { background-image: url('images/download (4).jpeg'); }
+  33% { background-image: url('images/download (5).jpeg'); }
+  66% { background-image: url('images/download (3).jpeg'); }
+  100% { background-image: url('images/images (5).jpeg'); }
+}
+
+#menu {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+#menu h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #e85d04;
+}
+/* Dishes */
+.dishes {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.dish {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dish img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.dish-info {
+  width: 50%;
+  padding: 20px;
+}
+
+.dish-left {
+  flex-direction: row;
+}
+
+.dish-right {
+  flex-direction: row-reverse;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+
+}
+.testimonials h2 {
+  margin-bottom: 30px;
+ color: #e85d04;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.testimonial {
+  background-color: #fdf4ef;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.testimonial img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 40px 20px;
+  background-color: #fff5f0;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact button {
+  background-color: #8B0000;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #25D366;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #8B0000;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dish {
+    flex-direction: column !important;
+  }
+
+  .dish img,
+  .dish-info {
+    width: 100%;
+  }
+
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
